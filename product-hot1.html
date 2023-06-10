@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <title>鬼滅之刃</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+      <div class="logopng" id="index">
+        <a href="index.html"><img src="image2/logo.png" alt="logo" width="100px" height="75px"></a>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="請輸入要查詢的商品" >
+        <button type="submit">搜尋</button>
+      </div>
+      <div class="cartpng">
+        <div class="shopping">
+          <img src="image2/cart.png" alt="cart" width="50px" height="50px"></a>
+          <span class="quantity">0</span>
+        </div>
+      </div>
+      <div class="userpng">
+        <a href="login.html"><img src="image2/user.png" alt="user" width="50px" height="50px"></a>
+      </div>
+
+      
+    <!--月讀-->
+    <div class="eyes">
+        <img id="myImage" src="image2/eye.gif" width="100px" height="80px">
+    </div>
+    
+    <audio id="myAudio" src="mp3/Itachis Mangekyou Sharingan Activation Sound Effect.mp3"></audio>
+    
+    <script>
+        var image = document.getElementById("myImage");
+        var audio = document.getElementById("myAudio");
+        
+        image.addEventListener("click", function() {
+            document.documentElement.classList.add("grayscale");
+            audio.play();
+            
+            setTimeout(function() {
+                document.documentElement.classList.remove("grayscale");
+            }, 5000);
+        });
+    </script>
+  
+    </header>
+
+   <!-- 購物車測試 -->
+    <div class="card">
+      <h1>購物車</h1>
+      <ul class="listCard">
+      </ul>
+      <div class="checkOut2">
+        <div class="total">0</div>
+      </div>
+      <div class="checkOut">
+          <div class="total"><a href="checkout.html">結帳</a></div>
+          <div class="closeShopping">Close</div>
+      </div>
+    </div>
+  <script src="app.js"></script>
+
+    <!-- nav -->
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="index.html#tab">所有漫畫</a>
+      <a href="problem.html">問題回報</a>
+      <a href="aboutus.html">關於我們</a>
+      <a href="user.html">會員中心</a>            
+    </nav>
+    <main>
+      <section class="section1">
+          <img src="image/hot/manga1.jpg">
+      </section>
+      <aside>
+        
+         <div class="item" data-id="1" data-name="鬼滅之刃" data-image="hot/manga1.jpg" data-price="50">
+          <p class="myname">鬼滅之刃</p>
+          <p>已售出:87本 87則評價 4.9<a>★</a> </p>
+          <p>$50</p>
+          <p><button onclick="addToCard(this)">加入購物車</button>
+          </p>
+          </div>
+
+      </aside>
+    <section class="section2">
+      《鬼滅之刃》（日語：鬼滅の刃），簡稱《鬼滅》，是日本漫畫家吾峠呼世晴所創作的奇幻漫畫作品，描述主角炭治郎為了尋求被變成鬼的妹妹變回人類的方法，並踏上斬鬼之旅的和風刀劍的奇譚。於2016年2月15日至2020年5月18日在《週刊少年Jump》連載，全205話。      </section>
+    </section>
+  </main>
+    <section class="section3">
+      <h1>商品評價</h1>
+
+      <div class="comment-form">
+        <h3>留言：</h3>
+        <textarea id="comment-input" rows="4" cols="50"></textarea>
+        <h3>評分：</h3>
+        <div id="rating-stars">
+          <span class="star" onclick="rateProduct(1)">&#9734;</span>
+          <span class="star" onclick="rateProduct(2)">&#9734;</span>
+          <span class="star" onclick="rateProduct(3)">&#9734;</span>
+          <span class="star" onclick="rateProduct(4)">&#9734;</span>
+          <span class="star" onclick="rateProduct(5)">&#9734;</span>
+        </div>
+        <button onclick="submitComment()">提交</button>
+      </div>
+      
+      <div id="comments-section">
+        <h2>商品評價：</h2>
+        <ul id="comments-list"></ul>
+      </div>
+
+      <script src="star.js"></script>
+    </section>
+     <!--清除-->
+     <div class="clearfix"></div>
+      <!-- footer-->
+      <footer>
+        <a>Copy Right©2023 漫迷</a>
+      </footer>
+</body>
+
+</html>

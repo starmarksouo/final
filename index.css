@@ -1,0 +1,490 @@
+/* body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fefae0;
+    font-family: 'Hachi Maru Pop', cursive;
+
+}
+
+/* header */
+header {
+    background-color: #ccd5ae;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Hachi Maru Pop', cursive;
+    z-index: 9999;
+}
+
+
+/* header裡面的圖案 */
+.logopng {
+    position: absolute;
+    left: 20px;
+    top: 2px;
+}
+
+.cartpng {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+}
+
+.userpng {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.search {
+    position: absolute;
+    left: 150px;
+    top: -5px;
+    
+}
+
+.search input {
+    padding: 0px 100px 0 0;
+    font-size: 22px;
+    border: 5px solid goldenrod;
+    border-radius: 10px;
+    font-family: 'Hachi Maru Pop', cursive;
+
+}
+
+.search input:focus{
+    border-color: lightgreen;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+
+}
+
+
+.search button:hover{
+    background-color: lightgreen;
+}
+
+.search button{
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+/*月讀*/
+.eyes img{
+    margin-left: 80%;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+
+
+
+/*購物車測試*/
+
+header .shopping{
+    position: relative;
+    text-align: right;
+}
+header .shopping img{
+    width: 40px;
+}
+header .shopping span{
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 1px 10px;
+    font-size: 22px;
+    
+}
+
+.card{
+    position: fixed;
+    top:0;
+    left: 100% ;
+    width: 500px;
+    background-color:#f5f7df;
+    height: 100vh;
+    transition: 0.5s;
+    z-index: 10000;
+   
+}
+.active .card{
+    left: calc(100% - 500px);
+}
+.active .container{
+   transform: translateX(-200px);
+}
+.card h1{
+    color: #E8BC0E;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+.card .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card .checkOut2{
+    position: absolute;
+    bottom: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+}
+.card .checkOut div{
+    background-color: #1baf32;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card .checkOut2 div{
+    background-color: #E8BC0E;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+   
+}
+.card .checkOut div:nth-child(2){
+    background-color: #1C1F25;
+    color: #fff;
+}
+.total a{
+    text-decoration: none;
+}
+
+
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #000000;
+    row-gap: 10px;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCard li img{
+    width: 90%;
+}
+.listCard li button{
+    background-color: rgba(20, 20, 20, 0.333);
+    border: none;
+}
+.listCard .count{
+    margin: 0 10px;
+}
+
+
+/* nav */
+nav {
+    position: fixed;
+    top: 75px;
+    width: 100%;
+    background-color: #d4a373;
+    text-align: center;
+    z-index: 9999;
+}
+
+nav a {
+    padding: 14px 16px;
+    display: inline-block;
+    color: white;
+    text-shadow: 0 0 0.2em white, 0 0 0.2em white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #fab743;
+    color: rgb(22, 48, 65);
+}
+
+/* 幻燈片 */
+.slideshow-container {
+    margin-top: 125px;
+    background-image: url(image2/flowers.png);
+    width: 100%; /* 設定容器的寬度 */
+    height: 500px; /* 設定容器的高度 */
+    position: relative; /* 設定容器為相對定位，用於定位幻燈片 */
+    }
+    
+.slideshow-container img{
+    width: 1000px; 
+    height: 88%;
+    text-align: center;
+    border: 10px solid #000;
+
+}
+
+.slide {
+    width: 100%; /* 設定幻燈片的寬度 */
+    height: 100%; /* 設定幻燈片的高度 */
+    position: absolute; /* 設定幻燈片為絕對定位，以便堆疊顯示*/
+    top: 5%; /* 設定幻燈片的上邊距 */
+    bottom: 5%;
+    text-align: center;
+    opacity: 0; /*設定幻燈片的透明度為0，隱藏幻燈片 */
+    transition: opacity 1s ease; /* 添加過渡效果，使幻燈片顯示和隱藏時平滑過渡 */
+}
+    
+.slide.active {
+    opacity: 1; /* 將當前活動的幻燈片的透明度設定為1，顯示幻燈片 */
+} 
+
+/* 熱銷前三名CSS */  
+.top3 {
+    background-size: cover;
+    margin: 20px 10% 0px 10%;
+    width: 80%;
+    height: 630px;
+    background-color: #fff5e7;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+
+  }
+
+.top3 h3{
+    color: orangered;
+    text-shadow: 0 0 0.2em white;
+    font-size: 35px;
+}
+
+.image-container1 {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+background-size: cover;
+}
+
+
+
+.image-container {
+margin-top: auto;
+position: relative;
+overflow: hidden;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+.image-container1 img {
+width: 350px;
+height: 450px;
+padding: 0 50px;
+opacity: 1;
+transition: opacity 0.5s ease-in-out;
+
+}
+
+.image-container:hover img {
+opacity: 0.4;
+}
+
+.image-container .image-text {
+position: absolute;
+top: 45%;
+left: 50%;
+transform: translate(-50%, -50%);
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+font-size: 27px;
+}
+
+.image-container:hover .image-text {
+opacity: 1;
+}
+
+/* 隱藏圖片的文字 */
+.image-container .image-text {
+display: none;
+}
+
+/* 滑鼠懸停時顯示圖片的文字 */
+.image-container:hover .image-text {
+display: block;
+}
+  
+
+.image-text h4{
+    color:  tomato;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black,0 0 0.2em black, 0 0 0.2em black,0 0 0.2em black, 0 0 0.2em black;
+    font-size: 31px;
+}
+
+.image-text p{
+    color: lightgreen;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black,0 0 0.2em black, 0 0 0.2em black,0 0 0.2em black, 0 0 0.2em black;
+}
+
+p.more {
+    color: white;
+    position: absolute;
+    transform: translate(100%,-200%);
+    font-size: 30px;
+    text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black;
+    text-decoration: none;
+  }
+  
+  
+
+.clickable-area {
+    cursor: pointer;
+  }
+
+
+
+
+/*所有漫畫分頁標籤*/
+
+
+#tab {
+    width: 80%;
+    height: 1400px;
+    margin: 0px 10% 0px 10%;
+    background: #e9edc9;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+
+}
+
+
+/* 頁籤ul */
+#tab ul {
+    margin-left: 40px;
+}
+
+#tab li {
+    list-style-type: none;
+}
+
+/* 頁籤上的文字 */
+#tab ul li a { 
+    text-decoration: none;
+    font-size: 30px;
+    color: #333;
+    float: left;
+    padding: 10px;
+    margin-right: 10%;
+
+
+}
+#tab ul li a:hover {
+    background-color: #ffa600;
+    border-radius: 10px;
+
+}
+
+/*頁籤div內容*/
+#tab div {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#tab img{
+    width: 360px;
+    height: 450px;
+    transition: opacity 0.5s ease-in-out;
+    border: 10px solid  #CC6600;
+    border-radius: 25px;
+}
+
+
+/*大標*/
+h1{
+    font-family: 'Hachi Maru Pop', cursive;
+    text-align: center;
+    font-size: 45px;
+    padding: 10px;
+    
+}
+
+
+
+span {
+    display: none;
+}
+
+span:target ~ #tab > div:first-of-type {
+    visibility: hidden;
+    height: 0;
+}
+
+/*頁籤內容顯示&第一筆*/
+span ~ #tab > div:first-of-type,
+#tab-1:target ~ #tab  div.tab-content-1,
+#tab-2:target ~ #tab  div.tab-content-2,
+#tab-3:target ~ #tab  div.tab-content-3,
+#tab-4:target ~ #tab  div.tab-content-4,
+#tab-5:target ~ #tab  div.tab-content-5 {
+    visibility: visible;
+    height: 1100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+
+
+
+/*首頁的加入購物車按鈕*/
+.image-container button{
+    color: black;
+    background-color: rgb(236, 120, 74);
+    font-family: 'Hachi Maru Pop', cursive;
+
+}
+
+.image-container button:hover{
+    background-color: white;
+
+}
+  
+
+/* footer */
+
+footer {
+    margin-top: 100px;
+    width: 100%;
+    height: 35px;
+    background-image: url(image2/smoke.gif);
+    background-color: rgb(110, 147, 196);
+    text-align: center;
+}
+
+
+
+

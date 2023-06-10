@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <title>漫迷</title>
+    <script>
+      function openInNewTab(url) {
+        window.open(url, '_blank');
+      }
+      </script>
+
+   
+</head>
+<body>
+ 
+    <!-- header -->
+    <header>
+      <div class="logopng" id="index">
+        <a href="index.html"><img src="image2/logo.png" alt="logo" width="100px" height="75px"></a>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="請輸入要查詢的商品" >
+        <button type="submit">搜尋</button>
+      </div>
+      <div class="cartpng">
+        <div class="shopping">
+          <img src="image2/cart.png" alt="cart" width="50px" height="50px"></a>
+          <span class="quantity">0</span>
+        </div>
+      </div>
+      <div class="userpng">
+        <a href="login.html"><img src="image2/user.png" alt="user" width="50px" height="50px"></a>
+      </div>
+
+    <!--月讀-->
+    <div class="eyes">
+        <img id="myImage" src="image2/eye.gif" width="100px" height="80px">
+    </div>
+    
+    <audio id="myAudio" src="mp3/Itachis Mangekyou Sharingan Activation Sound Effect.mp3"></audio>
+    
+    <script>
+        var image = document.getElementById("myImage");
+        var audio = document.getElementById("myAudio");
+        
+        image.addEventListener("click", function() {
+            document.documentElement.classList.add("grayscale");
+            audio.play();
+            
+            setTimeout(function() {
+                document.documentElement.classList.remove("grayscale");
+            }, 5000);
+        });
+    </script>
+  
+    </header>
+
+  
+
+   <!-- 購物車測試 -->
+    <div class="card">
+      <h1>購物車</h1>
+      <ul class="listCard">
+      </ul>
+      <div class="checkOut2">
+        <div class="total">0</div>
+      </div>
+      <div class="checkOut">
+          <div class="total"><a href="checkout.html">結帳</a></div>
+          <div class="closeShopping">Close</div>
+      </div>
+    </div>
+  <script src="app.js"></script>
+
+    <!-- nav -->
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="index.html#tab">所有漫畫</a>
+      <a href="problem.html">問題回報</a>
+      <a href="aboutus.html">關於我們</a>
+      <a href="user.html">會員中心</a>            
+    </nav>
+    
+    <!-- main -->
+
+    <main>
+    <!-- 幻燈片-->
+    <section>
+      <div class="slideshow-container">
+        <div class="slide">
+          <a href="product-hot1.html" target="_blank"><img src="image/slideshow/img1.png"></a>
+        </div>
+        <div class="slide">
+          <a href="product-hot1.html" target="_blank"><img src="image/slideshow/img2.jpg"></a>
+        </div>
+        <div class="slide">
+          <a href="product-hot1.html" target="_blank"><img src="image/slideshow/img3.jpg"></a>
+        </div>
+        <div class="slide">
+          <a href="product-hot1.html" target="_blank"><img src="image/slideshow/img4.jpg"></a>
+        </div>
+      </div>
+      <script src="slideshow.js"></script>
+    </section>
+
+    <!-- 熱銷前3名 -->
+    <div class="top3">
+      <!--跑馬燈-->
+      <marquee scrollamount="10"><h3>熱銷前3名｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡<img src="image2/run2.gif" width="100px" height="64px"></h3></marquee>
+      
+      <div class="image-container1">
+        <div class="image-container">
+          <div class="item" data-id="1" data-name="鬼滅之刃" data-image="hot/manga1.jpg" data-price="50">
+            <img src="image/hot/manga1.jpg">
+            <span class="image-text">
+              <h4>鬼滅之刃</h4>
+              <p>價格:$50</p>
+              <P>剩餘數量:50</P>
+              <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+              <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+            </span>
+          </div>
+        </div>
+
+        <div class="image-container">
+          <div class="item" data-id="2" data-name="火影忍者" data-image="hot/manga2.jpg" data-price="88">
+            <img src="image/hot/manga2.jpg">
+            <span class="image-text">
+              <h4>火影忍者</h4>
+              <p>價格:$88</p>
+              <P>剩餘數量:89</P>
+              <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+              <p class="more clickable-area" onclick="openInNewTab('product-hot2.html')">商品介面</p>
+            </span>
+          </div>
+        </div>
+        
+        <div class="image-container">
+          <div class="item" data-id="3" data-name="轉生史萊姆" data-image="hot/manga3.jpg" data-price="99">
+            <img src="image/hot/manga3.jpg">
+            <span class="image-text">
+              <h4>轉生史萊姆</h4>
+              <p>價格:$99</p>
+              <P>剩餘數量:99</P>
+              <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+              <p class="more clickable-area" onclick="openInNewTab('product-hot3.html')">商品介面</p>
+            </span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    </section>
+
+     <!-- 所有漫畫分頁標籤 -->
+    <section>
+      
+
+      <span id="tab-1">頁面1</span>
+      <span id="tab-2">頁面2</span>
+      <span id="tab-3">頁面3</span>
+      <span id="tab-4">頁面4</span>
+      <span id="tab-5">頁面4</span>
+
+      <!-- 所有漫畫的切換按鈕 -->
+      <div id="tab">
+        <h1>所有漫畫</h1>
+          <ul>
+              <li><a href="#tab-1">少年</a></li>
+              <li><a href="#tab-2">戀愛</a></li>
+              <li><a href="#tab-3">冒險</a></li>
+              <li><a href="#tab-4">運動</a></li>
+              <li><a href="#tab-5">音樂</a></li>
+          </ul>
+
+          <!-- 所有漫畫的內容區塊 -->
+          <!--所有漫畫區塊1-->
+                <div class="tab-content-1">
+                  <a class="image-container">
+                    <section class="item" data-id="1" data-name="鬼滅之刃" data-image="hot/manga1.jpg" data-price="50">
+                      <img src="image/hot/manga1.jpg">
+                      <span class="image-text">
+                        <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                        <h4>鬼滅之刃</h4>
+                        <p class="notmore">價格:$50</p>
+                        <P class="notmore">剩餘數量:50</P>
+                        <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                        <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                        
+                      </span>
+                    </section>
+                  </a>
+      
+                  <a class="image-container">
+                    <section class="item" data-id="2" data-name="火影忍者" data-image="hot/manga2.jpg" data-price="88">
+                      <img src="image/hot/manga2.jpg">
+                      <span class="image-text">
+                        <h4>火影忍者</h4>
+                        <p>價格:$88</p>
+                        <P>剩餘數量:89</P>
+                        <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                        <p class="more clickable-area" onclick="openInNewTab('product-hot2.html')">商品介面</p>
+                      </span>
+                    </section>
+                  </a>
+                  <a class="image-container">
+                    <section class="item" data-id="3" data-name="轉生史萊姆" data-image="hot/manga3.jpg" data-price="99">
+                      <img src="image/hot/manga3.jpg">
+                      <span class="image-text">
+                        <h4>轉生史萊姆</h4>
+                        <p>價格:$99</p>
+                        <P>剩餘數量:99</P>
+                        <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                        <p class="more clickable-area" onclick="openInNewTab('product-hot3.html')">商品介面</p>
+                      </span>
+                    </section>
+                  </a>
+                  <a class="image-container">
+                    <section class="item" data-id="4" data-name="獵人" data-image="hot/manga4.jpg" data-price="51">
+                      <img src="image/hot/manga4.jpg">
+                      <span class="image-text">
+                        <h4>獵人</h4>
+                        <p>價格:$51</p>
+                        <P>剩餘數量:87</P>
+                        <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                        <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                      </span>
+                    </section>
+                  </a>
+                  <a class="image-container">
+                    <section class="item" data-id="5" data-name="進擊的巨人" data-image="hot/manga5.jpg" data-price="52">
+                      <img src="image/hot/manga5.jpg">
+                      <span class="image-text">
+                        <h4>進擊的巨人</h4>
+                        <p>價格:$51</p>
+                        <P>剩餘數量:87</P>
+                        <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                        <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                      </span>
+                    </section>
+                  </a>
+                  <a class="image-container">
+                    <section class="item" data-id="6" data-name="我的英雄學院" data-image="hot/manga6.jpg" data-price="53">
+                      <img src="image/hot/manga6.jpg">
+                      <span class="image-text">
+                        <h4>我的英雄學院</h4>
+                        <p>價格:$51</p>
+                        <P>剩餘數量:87</P>
+                        <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                        <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                      </span>
+                    </section>
+                  </a>
+                </div>
+
+
+          <!--區塊2-->
+
+
+          <div class="tab-content-2">
+            <a class="image-container">
+              <section class="item" data-id="7" data-name="輝夜姬想讓人告白" data-image="love/lo1.jpg" data-price="50">
+                <img src="image/love/lo1.jpg">
+                <span class="image-text">
+                  <h4>輝夜姬想讓人告白</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:50</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+
+            <a class="image-container">
+              <section class="item" data-id="8" data-name="出租女友" data-image="love/lo2.jpg" data-price="50">
+                <img src="image/love/lo2.jpg">
+                <span class="image-text">
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                  <h4>出租女友</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:89</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="9" data-name="五等份的新娘" data-image="love/lo3.jpg" data-price="50">
+                <img src="image/love/lo3.jpg">
+                <span class="image-text">
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                  <h4>五等份的新娘</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:99</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="10" data-name="堀與宮村" data-image="love/lo4.jpg" data-price="50">
+                <img src="image/love/lo4.jpg">
+                <span class="image-text">
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                  <h4>堀與宮村</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:87</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="11" data-name="戀上換裝娃娃" data-image="love/lo5.jpg" data-price="50">
+                <img src="image/love/lo5.jpg">
+                <span class="image-text">
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                  <h4>戀上換裝娃娃</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:87</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="12" data-name="擅長捉弄人的高木同學" data-image="love/lo6.jpg" data-price="53">
+                <img src="image/love/lo6.jpg">
+                <span class="image-text">
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                  <h4>擅長捉弄人的高木同學</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:87</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+          </div>
+
+          <!--區塊3-->
+          <div class="tab-content-3">
+            <a class="image-container">
+              <section class="item" data-id="13" data-name="來自深淵" data-image="adventure/adve1.jpg" data-price="50">
+                <img src="image/adventure/adve1.jpg">
+                <span class="image-text">
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">點此查看商品詳細內容</p>
+                  <h4>來自深淵</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:50</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+
+            <a class="image-container">
+              <section class="item" data-id="14" data-name="葬送的芙莉蓮" data-image="adventure/adve2.jpg" data-price="50">
+                <img src="image/adventure/adve2.jpg">
+                <span class="image-text">
+                  <h4>葬送的芙莉蓮</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:89</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="15" data-name="異世界舅舅" data-image="adventure/adve3.jpg" data-price="50">
+                <img src="image/adventure/adve3.jpg">
+                <span class="image-text">
+                  <h4>異世界舅舅</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:99</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="16" data-name="JOJO的奇幻冒險" data-image="adventure/adve4.jpg" data-price="50">
+                <img src="image/adventure/adve4.jpg">
+                <span class="image-text">
+                  <h4>JOJO的奇幻冒險</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:87</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="17" data-name="天國大魔境" data-image="adventure/adve5.jpg" data-price="50">
+                <img src="image/adventure/adve5.jpg">
+                <span class="image-text">
+                  <h4>天國大魔境</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:87</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="18" data-name="奇諾之旅" data-image="adventure/adve6.jpg" data-price="53">
+                <img src="image/adventure/adve6.jpg">
+                <span class="image-text">
+                  <h4>奇諾之旅</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:87</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+          </div>
+          
+          <!--區塊4-->
+
+          <div class="tab-content-4">
+            <a class="image-container">
+              <section class="item" data-id="19" data-name="排球少年" data-image="sport/sp1.jpg" data-price="50">
+                <img src="image/sport/sp1.jpg">
+                <span class="image-text">
+                  <h4>排球少年</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:50</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+
+            <a class="image-container">
+              <section class="item" data-id="20" data-name="鑽石王牌" data-image="sport/sp2.jpg" data-price="60">
+                <img src="image/sport/sp2.jpg">
+                <span class="image-text">
+                  <h4>鑽石王牌</h4>
+                  <p>價格:$60</p>
+                  <P>剩餘數量:60</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="21" data-name="第一神拳" data-image="sport/sp3.jpg" data-price="70">
+                <img src="image/sport/sp3.jpg">
+                <span class="image-text">
+                  <h4>第一神拳</h4>
+                  <p>價格:$70</p>
+                  <P>剩餘數量:70</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="22" data-name="飆速宅男" data-image="sport/sp4.jpg" data-price="80">
+                <img src="image/sport/sp4.jpg">
+                <span class="image-text">
+                  <h4>飆速宅男</h4>
+                  <p>價格:$80</p>
+                  <P>剩餘數量:80</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="23" data-name="灌籃高手" data-image="sport/sp5.jpg" data-price="90">
+                <img src="image/sport/sp5.jpg">
+                <span class="image-text">
+                  <h4>灌籃高手</h4>
+                  <p>價格:$90</p>
+                  <P>剩餘數量:90</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="24" data-name="影子籃球員" data-image="sport/sp6.jpg" data-price="55">
+                <img src="image/sport/sp6.jpg">
+                <span class="image-text">
+                  <h4>影子籃球員</h4>
+                  <p>價格:$55</p>
+                  <P>剩餘數量:55</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+          </div>
+          
+          <!--區塊5-->
+          <div class="tab-content-5">
+            <a class="image-container">
+              <section class="item" data-id="25" data-name="一弦定音" data-image="music/mu1.jpg" data-price="50">
+                <img src="image/music/mu1.jpg">
+                <span class="image-text">
+                  <h4>一弦定音</h4>
+                  <p>價格:$50</p>
+                  <P>剩餘數量:50</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+
+            <a class="image-container">
+              <section class="item" data-id="26" data-name="孤獨搖滾" data-image="music/mu2.jpg" data-price="60">
+                <img src="image/music/mu2.jpg">
+                <span class="image-text">
+                  <h4>孤獨搖滾</h4>
+                  <p>價格:$60</p>
+                  <P>剩餘數量:60</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="27" data-name="四月是你的謊言" data-image="music/mu3.jpg" data-price="70">
+                <img src="image/music/mu3.jpg">
+                <span class="image-text">
+                  <h4>四月是你的謊言</h4>
+                  <p>價格:$70</p>
+                  <P>剩餘數量:70</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="28" data-name="K-ON！輕音部" data-image="music/mu4.jpg" data-price="80">
+                <img src="image/music/mu4.jpg">
+                <span class="image-text">
+                  <h4>K-ON!輕音部</h4>
+                  <p>價格:$80</p>
+                  <P>剩餘數量:80</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="29" data-name="吹響吧!上低音號" data-image="music/mu5.jpg" data-price="90">
+                <img src="image/music/mu5.jpg">
+                <span class="image-text">
+                  <h4>吹響吧!上低音號</h4>
+                  <p>價格:$90</p>
+                  <P>剩餘數量:90</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+            <a class="image-container">
+              <section class="item" data-id="30" data-name="NANA" data-image="music/mu6.jpg" data-price="55">
+                <img src="image/music/mu6.jpg">
+                <span class="image-text">
+                  <h4>NANA</h4>
+                  <p>價格:$55</p>
+                  <P>剩餘數量:55</P>
+                  <button onclick="addToCard(this)">加入購物車</button><br><br><br><br>
+                  <p class="more clickable-area" onclick="openInNewTab('product-hot1.html')">商品介面</p>
+                </span>
+              </section>
+            </a>
+          </div>
+
+      </div>
+    </section>
+
+   </main>
+   
+   
+      <!-- footer-->
+      <footer>
+        <a>Copy Right©2023 漫迷</a>
+      </footer>
+
+</body>
+
+</html>

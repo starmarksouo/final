@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="problem.css">
+    <title>問題回報</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="logopng" id="index">
+          <a href="index.html"><img src="image2/logo.png" alt="logo" width="100px" height="75px"></a>
+        </div>
+        <div class="search">
+          <input type="text" placeholder="請輸入要查詢的商品" >
+          <button type="submit">搜尋</button>
+        </div>
+        <div class="cartpng">
+          <div class="shopping">
+            <img src="image2/cart.png" alt="cart" width="50px" height="50px"></a>
+            <span class="quantity">0</span>
+          </div>
+        </div>
+        <div class="userpng">
+          <a href="login.html"><img src="image2/user.png" alt="user" width="50px" height="50px"></a>
+        </div>
+  
+      <!--月讀-->
+      <div class="eyes">
+          <img id="myImage" src="image2/eye.gif" width="100px" height="80px">
+      </div>
+      
+      <audio id="myAudio" src="mp3/Itachis Mangekyou Sharingan Activation Sound Effect.mp3"></audio>
+      
+      <script>
+          var image = document.getElementById("myImage");
+          var audio = document.getElementById("myAudio");
+          
+          image.addEventListener("click", function() {
+              document.documentElement.classList.add("grayscale");
+              audio.play();
+              
+              setTimeout(function() {
+                  document.documentElement.classList.remove("grayscale");
+              }, 5000);
+          });
+      </script>
+    
+      </header>
+  
+    
+  
+     <!-- 購物車測試 -->
+      <div class="card">
+        <h1>購物車</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut2">
+          <div class="total">0</div>
+        </div>
+        <div class="checkOut">
+            <div class="total"><a href="checkout.html">結帳</a></div>
+            <div class="closeShopping">Close</div>
+        </div>
+      </div>
+    <script src="app.js"></script>
+  
+      <!-- nav -->
+      <nav>
+        <a href="index.html">首頁</a>
+        <a href="index.html#tab">所有漫畫</a>
+        <a href="problem.html">問題回報</a>
+        <a href="aboutus.html">關於我們</a>
+        <a href="user.html">會員中心</a>            
+      </nav>
+
+
+
+    <section>
+    <h1>問題回報</h1>
+    <form action="/submit" method="POST">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">電子郵件：</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="issue">問題描述：</label><br>
+        <textarea name="issue" rows="4" cols="50" required></textarea><br>
+        <input type="submit" value="提交問題">
+    </form>
+    
+    </section>
+
+      <!--清除-->
+      <div class="clearfix"></div>
+
+      <!-- footer-->
+      <footer>
+        <a>Copy Right©2023 漫迷</a>
+      </footer>
+</body>
+</html>

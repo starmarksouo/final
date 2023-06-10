@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>關於我們</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="aboutus.css">
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="logopng" id="index">
+      <a href="index.html"><img src="image2/logo.png" alt="logo" width="100px" height="75px"></a>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="請輸入要查詢的商品">
+      <button type="submit">搜尋</button>
+    </div>
+    <div class="cartpng">
+      <div class="shopping">
+        <img src="image2/cart.png" alt="cart" width="50px" height="50px"></a>
+        <span class="quantity">0</span>
+      </div>
+    </div>
+    <div class="userpng">
+      <a href="login.html"><img src="image2/user.png" alt="user" width="50px" height="50px"></a>
+    </div>
+
+    <!--月讀-->
+    <div class="eyes">
+      <img id="myImage" src="image2/eye.gif" width="100px" height="80px">
+    </div>
+
+    <audio id="myAudio" src="mp3/Itachis Mangekyou Sharingan Activation Sound Effect.mp3"></audio>
+
+    <script>
+      var image = document.getElementById("myImage");
+      var audio = document.getElementById("myAudio");
+
+      image.addEventListener("click", function () {
+        document.documentElement.classList.add("grayscale");
+        audio.play();
+
+        setTimeout(function () {
+          document.documentElement.classList.remove("grayscale");
+        }, 5000);
+      });
+    </script>
+
+  </header>
+
+
+
+  <!-- 購物車測試 -->
+  <div class="card">
+    <h1>購物車</h1>
+    <ul class="listCard">
+    </ul>
+    <div class="checkOut2">
+      <div class="total">0</div>
+    </div>
+    <div class="checkOut">
+      <div class="total"><a href="checkout.html">結帳</a></div>
+      <div class="closeShopping">Close</div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+
+  <!-- nav -->
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="index.html#tab">所有漫畫</a>
+    <a href="problem.html">問題回報</a>
+    <a href="aboutus.html">關於我們</a>
+    <a href="user.html">會員中心</a>
+  </nav>
+
+
+  <section id="team-members">
+    <h1>關於我們</h1>
+    <div class="row">
+      <div class="member">
+        <img src="image/hot/manga1.jpg" alt="成員1">
+        <h2>陳昱憲</h2>
+        <p>
+          我是資管二乙的陳昱憲，這學期正在進行前端網頁專案。我認為相較於後端，前端更需要創意和美感。單單把框架建立起來交給後端處理是相對容易的。在這次的專案中，我花了最多時間在除錯部分。其中有一項功能一度無法正常運作，我嘗試修正了一個小時卻一直找不到問題所在，最後才發現原來是在HTML的第一行多了一個"
+          <"符號。這讓我深刻體會到有時候錯誤可能出在一個小細節上。
+            由於要製作網頁，所以我上網參考了許多其他人的作品。有些網頁看起來非常精美，功能也相當繁複，看似需要幾百甚至上千行的程式碼。對於這些作品，我非常好奇他們是如何編寫出來的。
+            總之，在這個專案的過程中，雖然辛苦，但團隊成員都非常給力，再加上我覺得相較於後端，前端開發更有趣一些，因此，我很開心能參與這個專案。 </p>
+      </div>
+      <div class="member">
+        <img src="image/hot/manga1.jpg" alt="成員2">
+        <h2>成員2</h2>
+        <p>
+          這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。
+        </p>
+      </div>
+      <div class="member">
+        <img src="image/hot/manga1.jpg" alt="成員3">
+        <h2>成員3</h2>
+        <p>
+          這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。這裡是成員1的介紹。
+        </p>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="member">
+        <img src="image/hot/manga1.jpg" alt="成員4">
+        <h2>張景崴</h2>
+        <p>
+        <p>
+          我是資管二甲的張景崴，這學期做的是網頁後端的部分，比起前端的排版問題，後端主要的麻煩是資料讀不到，就算讀到了，要印出來還有排版的問題，而這次坐起來最大的問題是購物車，前端做得購物車是使用js，但是js的檔案卻怎麼也讀不進mysql中，在經過上網查了很久後才解決。這次我才知道後端
+          的容易，也知道了做網頁並沒有我一開始想的這麼簡單，但這次對我來說是一次非常寶貴的經驗。
+
+        </p>
+        </p>
+      </div>
+      <div class="member">
+        <img src="image/hot/manga1.jpg" alt="成員5">
+        <h2>楊文森</h2>
+        <p>
+        <p>
+          第二次製作網頁，相比第一次自然是熟練許多，要說感想，後端與前端最大的差別，從我的程度以及角度來看，最大的差別便是---比起前端，後端不能"背"程式碼，更注重邏輯，你可以在邏輯暢通，且了解程式碼的情況，較為輕鬆的寫出一套可行的方案。還有，後端比起前端有更多修改上的不方便，或者說，bug比較多，至少我是這麼感覺的。
+          此次作業的收穫除了實用專業技能之外就是成就感，獨自完成一個大功能的成就感，雖然還有所欠缺的跟不完整，但這是我在有限的時間內盡量做到最好，至少我對此甚是滿意。
+          也感謝組員們的配合與努力，沒有大家的幫助，我們也不可能將作業做好，很高興與大家共事，也希望我們都有許於自己的收穫。
+        </p>
+        </p>
+      </div>
+      <div class="member">
+        <img src="image/hot/manga1.jpg" alt="成員6">
+        <h2>蔡睿哲</h2>
+        <p>
+        <p>
+          學習jsp以及mySQL讓我在製作動態網頁時可以有效的跟數據庫連結，學習jsp讓我能夠有效的將java代碼嵌入html中，用其代工的強大標籤庫，製作出富有多種功能的網頁，另外在學習mySQL上，我學習到了設計以及優化數據庫的能力，並可可以有效的將SQL語言進修查詢、插入、更新等操作，綜合來說，在這次學習後段的過程中讓我獲益良多，學習到了很多重要的基礎
+        </p>
+        </p>
+      </div>
+    </div>
+  </section>
+  <!--清除-->
+  <div class="clearfix"></div>
+
+  <!-- footer-->
+  <footer>
+    <a>Copy Right©2023 漫迷</a>
+  </footer>
+</body>
+
+</html>

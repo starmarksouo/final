@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checkout.css">
+    <title>結帳囉寶貝</title>
+</head>
+<body>
+ <!-- header -->
+ <header>
+  <div class="logopng" id="index">
+    <a href="index.html"><img src="image2/logo.png" alt="logo" width="100px" height="75px"></a>
+  </div>
+  <div class="search">
+    <input type="text" placeholder="請輸入要查詢的商品" >
+    <button type="submit">搜尋</button>
+  </div>
+  <div class="cartpng">
+    <div class="shopping">
+      <img src="image2/cart.png" alt="cart" width="50px" height="50px"></a>
+      <span class="quantity">0</span>
+    </div>
+  </div>
+  <div class="userpng">
+    <a href="login.html"><img src="image2/user.png" alt="user" width="50px" height="50px"></a>
+  </div>
+
+<!--月讀-->
+<div class="eyes">
+    <img id="myImage" src="image2/eye.gif" width="100px" height="80px">
+</div>
+
+<audio id="myAudio" src="mp3/Itachis Mangekyou Sharingan Activation Sound Effect.mp3"></audio>
+
+<script>
+    var image = document.getElementById("myImage");
+    var audio = document.getElementById("myAudio");
+    
+    image.addEventListener("click", function() {
+        document.documentElement.classList.add("grayscale");
+        audio.play();
+        
+        setTimeout(function() {
+            document.documentElement.classList.remove("grayscale");
+        }, 5000);
+    });
+</script>
+
+</header>
+
+
+
+<!-- 購物車測試 -->
+<div class="card">
+  <h1>購物車</h1>
+  <ul class="listCard">
+  </ul>
+  <div class="checkOut2">
+    <div class="total">0</div>
+  </div>
+  <div class="checkOut">
+      <div class="total"><a href="checkout.html">結帳</a></div>
+      <div class="closeShopping">Close</div>
+  </div>
+</div>
+<script src="app.js"></script>
+
+<!-- nav -->
+<nav>
+  <a href="index.html">首頁</a>
+  <a href="index.html#tab">所有漫畫</a>
+  <a href="problem.html">問題回報</a>
+  <a href="aboutus.html">關於我們</a>
+  <a href="user.html">會員中心</a>            
+</nav>
+
+<!--結帳畫面-->
+
+<section>
+                    <!-- 個人資料 -->
+                    <div id="tab-content-1" class="tab-content">
+                        <div class="tab-content-inner">
+                            <h1>Checkout Form</h1>
+                          
+                              <div class="row">
+                                <div class="col-75">
+                                  <div class="container">
+                                      <div class="row">
+                                        <div class="col-50">
+                                          <h3>帳單地址</h3>
+                                          <label for="fname"><i class="fa fa-user"></i>全名</label>
+                                          <input type="text" id="fname" name="firstname" placeholder="宇治波 佐助">
+                                          <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                          <input type="text" id="email" name="email" placeholder="sasuke@gmail.com">
+                                          <label for="adr"><i class="fa fa-address-card-o"></i> 地址</label>
+                                          <input type="text" id="adr" name="address" placeholder="火之國 宇治波村(已滅村)">
+                                        </div>
+                              
+                                        <div class="col-50">
+                                          <h3>Payment</h3>
+                                          <label for="cname">持卡人</label>
+                                          <input type="text" id="cname" name="cardname" placeholder="宇治波 佐助">
+                                          <label for="ccnum"><i class="fa-solid fa-credit-card"></i>信用卡</label>
+                                          <input type="text" id="ccnum" name="cardnumber" placeholder="1234-5678-9012-3456">
+                                          <label for="expmonth">有效日期</label>
+                                          <input type="text" id="expmonth" name="expmonth" placeholder="December">
+                                          <div class="row">
+                                            <div class="col-50">
+                                              <label for="expyear">有效年</label>
+                                              <input type="text" id="expyear" name="expyear" placeholder="2020">
+                                            </div>
+                                            <div class="col-50">
+                                              <label for="cvv">驗證碼</label>
+                                              <input type="text" id="cvv" name="cvv" placeholder="234">
+                                            </div>
+                                          </div>
+                                        </div>
+                                        
+                                      </div>
+
+                                      <!-- 確定送出按鈕 -->
+                                      
+                                      <div class="sent">
+                                        <a href="#" class="btn" onclick="showConfirmation()">                                          <span></span>
+                                          <span></span>
+                                          <span></span>
+                                          <span></span>
+                                          確認送出
+                                        </a>
+                                      </div>
+                                      
+                              
+                                  </div>
+                                </div>
+                                <div class="col-25">
+                                  <div class="container">
+                                    <h4>購物車 <span class="price" style="color:red"><i class="fa fa-shopping-cart"></i> <b>2</b></span></h4>
+                                    <p><a href="#">Item 1</a> <span class="price">£13</span></p>
+                                    <p><a href="#">Item 2</a> <span class="price">£13</span></p>
+                                    <hr>
+                                    <p>Total <span class="price" style="color:red"><b>£26</b></span></p>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                  </section>
+            <!-- 確定送出按鈕 -->
+            <script>function showConfirmation() {
+              var confirmation = document.getElementById('confirmation');
+              confirmation.classList.add('show');
+            
+              setTimeout(function() {
+                confirmation.classList.remove('show');
+              }, 3000);
+            }
+            </script>
+            <!-- 提示窗口 -->
+              <div class="confirmation" id="confirmation">
+                <p>訂單已送出，請到<a href="user.html">會員中心</a>查詢訂單進度。</p>
+              </div>
+<!-- footer-->
+<footer>
+  <a>Copy Right©2023 漫迷</a>
+</footer>
+    
+</body>
+</html>
