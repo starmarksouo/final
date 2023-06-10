@@ -867,7 +867,8 @@ header{
 	left: 0;
 	bottom: 0;
 	right: 0;
-
+	background-image: url(/image2/cover.jpg);
+	background-size: cover;
 }
 
 .coverDesign::after {
@@ -881,26 +882,6 @@ header{
 	right: 0;
 }
 
-.coverDesign h1 {
-	color: #fff;
-	font-size: 2.2em;
-	letter-spacing: 0.05em;
-	text-align: center;
-	margin: 54% 0 0 0;
-	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
-}
 
-.coverDesign p {
-	color: #f8f8f8;
-	font-size: 1em;
-	text-align: center;
-	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
-}
-
-
-.blue {
-  background-image: url(/image2/note.jpg);
-	background-size: cover;
-}
 /*end*/
 
